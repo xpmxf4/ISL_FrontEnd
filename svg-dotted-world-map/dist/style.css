@@ -1,0 +1,31 @@
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+svg {
+  width: 80%;
+}
+
+circle {
+  fill: #fd6162;
+}
+
+
+/* circle, */
+
+.banaan {
+  fill: #fff;
+  transition: all 2s ease;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+  to {
+    r: 5;
+  }
+}
