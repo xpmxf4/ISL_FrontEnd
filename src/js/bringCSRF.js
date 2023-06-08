@@ -1,8 +1,8 @@
 const csrfApi = 'http://127.0.0.1:3000/csrf-token'
+const csrfToken = null;
 
 fetch(csrfApi).then(res => {
-    const csrfToken = res.data;
-    console.log(csrfToken);
+    csrfToken = res.data.csrfToken;
 }).catch(err => {
     console.log(err)
 })
