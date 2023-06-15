@@ -57,12 +57,17 @@ for (let i = 0; i < pathTags.length; i++) {
                 console.log(err);
             })
 
-
-        // Call API 
-        await fetch("https://ig6oli6355.execute-api.ap-northeast-2.amazonaws.com/dev/countries", {
+        // await fetch("https://ig6oli6355.execute-api.ap-northeast-2.amazonaws.com/dev/countries", {
+        await fetch("http://127.0.0.1:3000/countries", {
             method: "POST",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+                "CSRF-Token": localStorage.getItem("csrfToken"),
+            },
             body: JSON.stringify({
-                _csrf: localStorage.getItem("csrfToken")
+                "fromCountry": "Korea",
+                "toCountry": "United Kingdom",
             })
         })
             .then(res => res.json())
