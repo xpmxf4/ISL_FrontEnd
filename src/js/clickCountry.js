@@ -15,7 +15,6 @@ const fetchCountryData = async (toCountry) => {
         })
 
         const data = await response.json();
-        console.log(data);
     } catch (err) {
         console.error(`Error fetching country data: ${err}`);
     }
@@ -28,7 +27,6 @@ pathTags.forEach(el => {
         // Get el's full country name from class
         // have to get countryName from sm_state_QA
         let toCountry = el.classList[1].split("_")[2];
-        console.log(toCountry)
 
         // Fetch data
         fetchCountryData(toCountry);
