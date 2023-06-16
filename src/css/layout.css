@@ -39,12 +39,37 @@ body {
     opacity: 1;
 }
 
+#statisticsContainer {
+    padding: 50px
+}
+
+.statistics {
+    transition: max-height 0.6s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.statistics.open {
+    max-height:130px;
+    margin : 0px;
+    margin-top: 40px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
 #toggle {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 8px;
     cursor: pointer;
     color: #fff;
+    /* 드래그 방지 */
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Standard syntax */
 }
 
 #overlay {
