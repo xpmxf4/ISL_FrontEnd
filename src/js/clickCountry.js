@@ -1,11 +1,11 @@
 import { toggleSidebar } from "./sidebar.js"
 
 const pathTags = Array.from(document.getElementsByClassName("sm_state"))
-const api = "http://127.0.0.1:3000"
+const endPoint = "https://ig6oli6355.execute-api.ap-northeast-2.amazonaws.com/dev"
 
 const fetchCountryData = async (toCountry) => {
     try {
-        const response = await fetch("http://127.0.0.1:3000" + "/countries", {
+        const response = await fetch(endPoint + "/countries", {
             method: "POST",
             credentials: "include",
             headers: {
